@@ -27,12 +27,7 @@ pipeline{
                 bat "kubectl apply -f service.yaml"
             }
         }
-        stage('Restart Deployment') {
-            steps {
-                echo "Restarting Deployment to pick up new image..."
-                bat "kubectl rollout restart deployment/plantcare-deployment"
-            }
-        }
+       
     }
     post{
         success{
