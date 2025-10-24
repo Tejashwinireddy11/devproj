@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plantcare-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plantcare
+  template:
+    metadata:
+      labels:
+        app: plantcare
+    spec:
+      containers:
+      - name: plantcare
+        image: tejashwini1108/devproj:t8
+
+        ports:
+
+        - containerPort: 5000

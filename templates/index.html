@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plant Care Suggestion</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #a8e6cf, #dcedc1);
+      padding: 50px;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    select, button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background-color: #66bb6a;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    footer {
+      margin-top: 40px;
+      color: #33691e;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Plant Care Suggestion App</h1>
+  <form action="/result" method="POST">
+    <label for="plant">Choose a plant type:</label><br>
+    <select id="plant" name="plant" required>
+      <option value="">-- Select a plant type --</option>
+      <option value="flowering">Flowering</option>
+      <option value="cactus">Cactus</option>
+      <option value="indoor">Indoor</option>
+      <option value="herbs">Herbs</option>
+      <option value="succulent">Succulent</option>
+    </select><br>
+    <button type="submit">Get Care Tips</button>
+  </form>
+
+  <footer>Eco-friendly. Lightweight. Positive Vibes </footer>
+</body>
+</html>

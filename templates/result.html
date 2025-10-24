@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ plant }} Plant Care</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f8ffae, #43c6ac);
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #1b5e20;
+    }
+    .card {
+      background-color: white;
+      margin: 30px auto;
+      padding: 25px;
+      width: 60%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background-color: #81c784;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 8px;
+    }
+    a:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <h1> {{ plant }} Plant Care Tips</h1>
+  {% if care %}
+    <div class="card">
+      <p><strong>Watering:</strong> {{ care['watering'] }}</p>
+      <p><strong>Sunlight:</strong> {{ care['sunlight'] }}</p>
+    </div>
+  {% else %}
+    <p>Sorry, we don’t have care information for this plant type yet.</p>
+  {% endif %}
+  <a href="/">Back to Home</a>
+</body>
+</html>
